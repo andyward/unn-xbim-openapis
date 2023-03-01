@@ -5,14 +5,14 @@ import App from './App';
 import { BrowserRouter } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
 import { OpenAPI } from './flexapi';
-import * as config from './Config';
+import { Config } from './flexConfig';
 
 const container = document.getElementById('root')!;
 // Create a root.
 const root = ReactDOM.createRoot(container);
 
-// Set Credentials / PAT
-OpenAPI.TOKEN = config.token;
+// Set xbim Flex Credentials / Personal Access Token (PAT). Typically you'd do this via an OAuth2 flow / OIDC
+OpenAPI.TOKEN = Config.token;
 
 
 root.render(

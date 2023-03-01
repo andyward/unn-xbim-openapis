@@ -1,15 +1,15 @@
 
 import './App.css';
-import { lazy, Suspense } from 'react';
+import { Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { NavBar } from './Components';
+import loadable from '@loadable/component';
 
-const NoMatch = lazy(() => import('./Components/NoMatch'));
-const Home = lazy(() => import('./Pages/Home'));
-const About = lazy(() => import('./Pages/About'));
-const Models = lazy(() => import('./Pages/Models'));
-const ModelDetails = lazy(() => import('./Pages/ModelDetails'));
-
+const NoMatch = loadable(() => import('./Components/NoMatch'));
+const Home = loadable(() => import('./Pages/Home'));
+const About = loadable(() => import('./Pages/About'));
+const Models = loadable(() => import('./Pages/Models'));
+const ModelDetails = loadable(() => import('./Pages/ModelDetails'));
 
 
 const App = () => {
@@ -19,7 +19,7 @@ const App = () => {
       <NavBar />
       <Suspense fallback={<div className="container">Loading...</div>}>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route index path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/models" element={<Models />} />
           <Route path="/models/:modelId" element={<ModelDetails />} />

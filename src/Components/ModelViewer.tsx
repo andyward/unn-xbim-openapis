@@ -3,7 +3,7 @@ import React from "react";
 import {Viewer, RenderingMode, ViewType,
     NavigationCube, Grid, LoaderOverlay, ViewerLoadedEvent, 
     MessageProgress, MessageType, Message} from '@xbim/viewer';
-import { tenantId, region } from "../Config";
+import { Config } from "../flexConfig";
 import { Model, OpenAPI } from "../flexapi";
 
 export interface State {
@@ -120,7 +120,7 @@ class ModelViewer extends React.Component<SampleProps,State> {
             Authorization: 'Bearer '+ OpenAPI.TOKEN
         };
         const model = this.props.model;
-        const url = `https://apis.xbim-dev.net/${region}/aim/2.0/${tenantId}/wexbim/complete?assetId=${model.AssetId}&modelId=${model.AssetModelId}`
+        const url = `https://apis.xbim-dev.net/${Config.region}/aim/2.0/${Config.tenantId}/wexbim/complete?assetId=${model.AssetId}&modelId=${model.AssetModelId}`
 
         
         this.viewer.loadAsync(url, 88256, headers, updateProgress);

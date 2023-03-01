@@ -5,14 +5,11 @@
   "dependencies": {
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
+    "@loadable/component": "^5.15.3",
     "@mui/material": "^5.11.10",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
-    "@types/jest": "^29.4.0",
-    "@types/node": "^18.14.1",
-    "@types/react": "^18.0.28",
-    "@types/react-dom": "^18.0.11",
     "@xbim/flex-react-api": "^2.0.301",
     "@xbim/flex-react-identity-api": "^2.0.301",
     "@xbim/viewer": "^2.1.0-pre202302270759",
@@ -51,8 +48,11 @@
     ]
   },
   "devDependencies": {
-    "openapi-typescript-codegen": "^0.23.0",
-    "@types/react": "17.0.20",
-    "@types/react-dom": "17.0.9"
+    "@types/jest": "^29.4.0",
+    "@types/loadable__component": "^5.13.4",
+    "@types/node": "^18.14.1",
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
+    "openapi-typescript-codegen": "^0.23.0"
   }
 }

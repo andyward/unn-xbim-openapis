@@ -67,8 +67,15 @@ nav {
 	height: 80px;
 }
 
+.logo a {
+	display: flex;
+	flex-direction: row;
+
+}
+
 .logo h1 {
 	color: #0097e6;
+	padding-left: 1em;
 }
 
 nav .nav-items {

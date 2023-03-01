@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { ModelInfo, ModelsService } from '../flexapi';
-import { tenantId, region } from '../Config';
+import { Config } from '../flexConfig';
 import ModelViewer from '../Components/ModelViewer';
 
 
@@ -13,8 +13,8 @@ const ModelDetails = () => {
     useEffect(() => {
         const fetchModel = async () => {
             const result = await ModelsService.modelsGetSingleByAssetmodelidAndTenantid({
-                tenantId: tenantId,
-                region: region,
+                tenantId: Config.tenantId,
+                region: Config.region,
                 assetModelId: Number.parseInt(modelId!)
             }
             );

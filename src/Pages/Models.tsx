@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import Moment from 'react-moment';
 import { useNavigate, Link } from 'react-router-dom';
 import {Model, ModelsService } from '../flexapi';
-import * as config from '../Config';
+import {Config} from '../flexConfig';
 
 
 class Paging {
@@ -39,7 +39,7 @@ const Models = () => {
 			try{
 
 				const result = await ModelsService.modelsGetByTenantid(
-					{tenantId:config.tenantId, region: config.region, count: true, top: paging.top, skip: paging.skip, orderby: paging.sort}
+					{tenantId:Config.tenantId, region: Config.region, count: true, top: paging.top, skip: paging.skip, orderby: paging.sort}
 				);
 				console.log('loaded', result);
 				setModels(result.value!);
