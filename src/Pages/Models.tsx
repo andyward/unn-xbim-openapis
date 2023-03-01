@@ -55,7 +55,8 @@ const Models = () => {
 			<button className="btn" onClick={() => navigate(-1)}>
 				Go Back
 			</button>
-			<div className="tip">This page should list the building models based on the information pulled from the Flex Open API.</div>
+			<div className="tip"><p>This page should list the building models based on the information acquired from the Flex platform via its Open API.</p>
+			<p><b>If it doesn't... take a look at the <a href='/about'>About Page</a></b></p></div>
 			<div className="title">
 				<h1>{paging.count} Building Models</h1>
 			</div>

@@ -25,7 +25,7 @@ body {
 	font-size: 16px;
 	background: #f6f6f6;
 	overflow: auto;
-	line-height: 2em;
+
 }
 
 a {
@@ -283,11 +283,24 @@ nav .nav-items {
 
 .about-container p {
 	margin-bottom: 1em;
+	line-height: 2em;
 }
 
 .about-container ol {
 	margin-left: 3em;
 	font-weight: bolder;
+}
+.about-container code {
+	background-color: #fff;
+	padding: 0.25em;
+	border-radius: 8px;
+}
+
+.about-container pre {
+	background-color: #000;
+	color: white;
+	padding: 0.25em;
+	border-radius: 8px;
 }
 
 .about-container ul {
