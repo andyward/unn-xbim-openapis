@@ -25,6 +25,7 @@ body {
 	font-size: 16px;
 	background: #f6f6f6;
 	overflow: auto;
+	line-height: 2em;
 }
 
 a {
@@ -271,6 +272,27 @@ nav .nav-items {
 	color: #000;
 }
 
-.viewercontainer {
+.tip {
+	background-color: gainsboro;
+	border-radius: 5px;
+	font-style: italic;
+	font-size: smaller;
+	padding: 2em;
+	margin-top: 1em;
+}
 
+.about-container p {
+	margin-bottom: 1em;
+}
+
+.about-container ol {
+	margin-left: 3em;
+	font-weight: bolder;
+}
+
+.about-container ul {
+	
+	font-weight: lighter;
+	list-style-type: square;
+	
 }

@@ -2,7 +2,6 @@ export const Config: IConfig = {
     tenantId: "openapi-demo",
     region: "Sandbox",
     token: "IfnHA4HdZjwfCTXQJL51Ue1mhpcNJkaE25a31unUmVc",
-    
 }
 
 interface IConfig {
