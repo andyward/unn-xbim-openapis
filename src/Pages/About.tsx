@@ -12,17 +12,17 @@ const About = () => {
 			</div>
 			<div className="about-container">
 				<p>
-					This demo application provides a vary basic viewer of building models using the <a href="https://xbim.net/flex-platform/">xbim Flex</a> cloud platform.
+					This demo application provides a simple viewer of building models using the <a href="https://xbim.net/flex-platform/">xbim Flex</a> cloud platform.
 				</p>
 				<p>
-					Out the box this react app has no connection to the Flex service, but we're going to build a simple library that can call xbim Flex and return the data we need.
+					Out the box this React 18 app has no connection to the xbim Flex service (where the models live), but we're going to build a simple library that can call the Flex services and return the data we need.
 					<em>Normally</em> you'd probably download a pre-packaged library that <a href="https://www.npmjs.com/package/@xbim/flex-identity-api">already implements</a>&nbsp;
-					the openAPI library (from a package managed such as npmjs), but today we're going to build one ourselves so we can see what's involved.
+					Flex's OpenAPI (from a package manager such as npmjs), but today we're going to build one ourselves so we can see what's involved.
 				</p>
 				<p>We know Flex has an OpenAPI definition available at <a href="https://apis.xbim-dev.net/openapi/definitions/aim-v2">https://apis.xbim-dev.net/openapi/definitions/aim-v2</a>. You can also view and explore this
-					API through the developer portal at <a href="https://developers.xbim.net/reference/models_getbytenantid">https://developers.xbim.net/reference/models_getbytenantid</a>. (This documentation has been generated from the same OpenAPI definition) </p>
+					API through our developer portal at <a href="https://developers.xbim.net/reference/models_getbytenantid">https://developers.xbim.net/reference/models_getbytenantid</a>. (This documentation has mostly been generated from the same OpenAPI definitions) </p>
 				<p>
-					We're going to generate our own client library for the Flex OpenAPI in typescript, which we can use straight from React.
+					We're going to generate our own client library for the Flex OpenAPI in typescript, which we can use straight from this React app.
 				</p>
 				<p>
 					Here's how:
