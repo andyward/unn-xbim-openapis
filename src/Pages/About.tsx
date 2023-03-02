@@ -20,7 +20,7 @@ const About = () => {
 					the openAPI library (from a package managed such as npmjs), but today we're going to build one ourselves so we can see what's involved.
 				</p>
 				<p>We know Flex has an OpenAPI definition available at <a href="https://apis.xbim-dev.net/openapi/definitions/aim-v2">https://apis.xbim-dev.net/openapi/definitions/aim-v2</a>. You can also view and explore this
-					API through the developer portal at <a href="https://developers.xbim.net/reference/models_getbytenantid">https://developers.xbim.net/reference/models_getbytenantid</a>. (This documetation has been generated from the same OpenAPI definition) </p>
+					API through the developer portal at <a href="https://developers.xbim.net/reference/models_getbytenantid">https://developers.xbim.net/reference/models_getbytenantid</a>. (This documentation has been generated from the same OpenAPI definition) </p>
 				<p>
 					We're going to generate our own client library for the Flex OpenAPI in typescript, which we can use straight from React.
 				</p>
@@ -37,7 +37,7 @@ const About = () => {
 						</ul>
 						<li>Now open a Terminal window so we can run this 'generate' script</li>
 						<li>In the terminal enter:<br />
-							<code>&nbsp;&nbsp;npm run generate</code>
+							<pre>&nbsp;&nbsp;npm run generate</pre>
 						</li>
 						<ul>
 							<li>This will use 'node package manager' (npm) to execute the 'generate' script</li>
@@ -47,7 +47,17 @@ const About = () => {
 								&gt; openapi --input https://apis.xbim-dev.net/openapi/definitions/aim-v2 --output src/flexapi --useOptions<br />
 								&gt;</pre>
 						</li>
-						<li>The library will have been generated</li>
+						<li>The library will have been generated in <code>src/flexApi/</code></li>
+						<ul>
+							<li>React should rebuild your app and note the Models page will now display models from the Flex 'openapi-demo' area</li>
+						</ul>
+						<li>Take a look at the code generated. Note it how contains three folders:</li>
+						<ul>
+							<li><em>Models</em> - containing the schema definitions of all the data structures. e.g. Model, Space, Component</li>
+							<li><em>Services</em> - containing services functions that invoke the API endpoints for a domain. e.g. ModelsService to work with models</li>
+							<li><em>Core</em> - common code used by the services - include OpenAPI configuration</li>
+						</ul>
+
 					</ol>
 				</p>
 			</div>

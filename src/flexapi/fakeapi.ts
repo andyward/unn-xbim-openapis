@@ -6,16 +6,41 @@ export class ModelsService {
     static modelsGetSingleByAssetmodelidAndTenantid(arg0: { tenantId: string; region: "Sandbox" | "UK" | "WestEurope" | "Fx003" | undefined; assetModelId: number; }) : ModelInfo {
         return {}
     }
-	static modelsGetByTenantid(arg0: { tenantId: string; region: "Sandbox" | "UK" | "WestEurope" | "Fx003" | undefined; count: boolean; top: number; skip: number | undefined; orderby: string; }) : {value: Model[], [x: string]: any;}{
+	static modelsGetByTenantid(arg0: { tenantId: string; region: "Sandbox" | "UK" | "WestEurope" | "Fx003" | undefined; count?: boolean; top?: number; skip?: number | undefined; orderby?: string; }) : {value: Model[], [x: string]: any;}{
 		return { value: [] };
 	}
 
 }
 
-/** A stubbed Model */
+export class SpacesService {
+    static spacesGetByTenantid(arg0: { tenantId: string; region: "Sandbox" | "UK" | "WestEurope" | "Fx003" | undefined; filter?: string; top?: number; skip?: number; count?: boolean; }): {value: Space[], [x: string]: any;} {
+        return { value: [] };
+    }
+
+}
+
+export class LevelsService {
+    static levelsGetByTenantid(arg0: { tenantId: string; region: "Sandbox" | "UK" | "WestEurope" | "Fx003" | undefined; filter?: string; expand?: string; orderby?: string; count?: boolean; }) : {value: Level[], [x: string]: any;} {
+        return { value: [] };
+    }
+
+}
+
+/** A stubbed Model, Level, Space  */
 export class Model {
+    /** Any parameter */
     [x: string]: any;
 }
+
+export class Space {
+    [x: string]: any;
+}
+
+export class Level {
+    Spaces: Space[] = [];
+    [x: string]: any;
+}
+
 
 /** A stubbed Model Info */
 export class ModelInfo {

@@ -309,3 +309,25 @@ nav .nav-items {
 	list-style-type: square;
 	
 }
+
+
+.levels {
+	min-height: 300px;
+	max-height: 300px;
+	overflow-y: auto;
+}
+
+.levels .space:hover {
+	background: #0097e6;
+	cursor: pointer;
+}
+ul.floor li {
+	font-weight: 600;
+}
+
+ul.floor .space li {
+
+	padding-left: 2em;
+	font-weight: 300;
+}
+

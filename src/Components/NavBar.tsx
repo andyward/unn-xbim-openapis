@@ -8,7 +8,7 @@ export const NavBar = () => {
 
             <div className="logo">
 						<a href="/">
-                     <img src="xBim_parent_logo-01.png" alt="xbim Logo" height={32}/>
+                     <img src="/xBim_parent_logo-01.png" alt="xbim Logo" height={32}/>
 							<h1>Flex Building Viewer</h1>
 						</a>
 					</div>
